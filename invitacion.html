@@ -12,6 +12,7 @@
 <body>
     <div class="container">
         <div class="center-group text-primary">
+            <div id="invitation-content">
             <div style="display: flex; justify-content: center; align-items: center;">
                 <img src="./divider2.svg" class="divisor center"></img>
             </div>
@@ -266,6 +267,15 @@
             </div>
             <div style="display: flex; justify-content: center; align-items: center; margin-top: 2rem;">
                 <img src="./divider2.svg" class="divisor center invert"></img>
+            </div>
+            </div>
+        </div>
+        <div class="envelope-wrapper" id="envelope-wrapper" onClick="openEnvelope()" role="button" tabindex="0" aria-label="Abrir invitación">
+            <div class="envelope">
+                <div class="envelope-back"></div>
+                <div class="envelope-flap"></div>
+                <div class="envelope-seal"><span class="other-font">S&E</span></div>
+                <p class="center printed envelope-hint" style="margin-top: 1rem; color:white">Tocá el sobre para abrir</p>
             </div>
         </div>
     </div>

@@ -2,6 +2,23 @@ function openLocation(url) {
     window.open(url, '_blank');
 }
 
+function openEnvelope() {
+    const wrapper = document.getElementById('envelope-wrapper');
+    const content = document.getElementById('invitation-content');
+    const letter = document.querySelector('.center-group');
+    if (!wrapper || !content || wrapper.classList.contains('is-opening')) {
+        return;
+    }
+    wrapper.classList.add('is-opening');
+    content.classList.add('visible');
+    letter.classList.add('showOk');
+    content.style.display = 'block';
+    // matches the envelope fade-out chain: 0.35s delay + 0.4s transition, plus buffer
+    setTimeout(() => {
+        wrapper.style.display = 'none';
+    }, 3000);
+}
+
 function startCounter() {
     const eventDate = new Date('2027-03-20T17:00:00');
 
