@@ -117,14 +117,10 @@ function addGuest() {
     const guestItem = document.createElement('div');
     guestItem.className = 'item-horiz';
     guestItem.innerHTML = `
-        <div class="item">
-            <label for="guest-name-${id_num}">Nombre y apellido *</label>
-            <input type="text" required name="guest-name-${id_num}" id="guest-name-${id_num}" placeholder="Nombre y apellido" />
-        </div>
-        <div class="item">
-            <label for="guest-age-${id_num}">Edad *</label>
-            <input type="number" min="0" required name="guest-age-${id_num}" id="guest-age-${id_num}" placeholder="Edad" />
-        </div>
+            <label class="label-name" for="guest-name-${id_num}">Nombre y apellido *</label>
+            <input class="input-name" type="text" required name="guest-name-${id_num}" id="guest-name-${id_num}" placeholder="Nombre y apellido" />
+            <label class="label-age" for="guest-age-${id_num}">Edad *</label>
+            <input class="input-age" type="number" min="0" required name="guest-age-${id_num}" id="guest-age-${id_num}" placeholder="Edad" />
     `;
     const existingRemoveButton = itemList.querySelector('.ghost-button');
     if (existingRemoveButton) {

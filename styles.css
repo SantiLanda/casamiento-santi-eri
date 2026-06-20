@@ -374,9 +374,11 @@ td {
     display: flex;
     flex-direction: column;
     width: 100%;
+    min-width: 0;
 }
 
 input, textarea {
+    min-width: 0;
     border-radius: 0.5rem;
     border: none;
     font-family: "Sorts Mill Goudy", serif;
@@ -395,8 +397,39 @@ label {
 }
 
 .item-horiz {
-    display: flex;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 1rem;
+    align-items: center;
+
+    grid-template-areas:
+        "label-name label-age"
+        "name age";
+}
+
+.item-horiz * {
+    max-width: 100%;
+}
+
+.item * {
+    max-width: 100%;
+}
+
+.item-horiz .label-name {
+    grid-area: label-name;
+}
+
+.item-horiz .label-age {
+    grid-area: label-age;
+}
+
+.item-horiz .input-name {
+    grid-area: name;
+}
+
+.item-horiz .input-age {
+    grid-area: age;
 }
 
 button[type="submit"] {
