@@ -133,6 +133,18 @@ button {
     color: #602a2a;
 }
 
+.highlight-button {
+    background-color: #d68d8d59;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+}
+
+.highlight-button .up-down-animation {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
 p {
     margin: 0;
     margin-top: 0.5rem;
