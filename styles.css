@@ -135,7 +135,7 @@ button {
 
 .highlight-button {
     background-color: #4a0d0d;
-    border-radius: 50%;
+    border-radius: 40%;
     height: 3rem;
     width: 3rem;
 }
